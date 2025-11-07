@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 13:58:22 by mg                #+#    #+#             */
-/*   Updated: 2025/11/07 16:43:48 by mg               ###   ########.fr       */
+/*   Updated: 2025/11/07 17:18:17 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,5 @@ std::cout <<"a energy: " << a.getEnergyPoint() << std::endl;
 	a.attack("pluto");
 	std::cout <<"a energy: " << a.getEnergyPoint() << std::endl;
 
+	a.takeDamage(8);
 }

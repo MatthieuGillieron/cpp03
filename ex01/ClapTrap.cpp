@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 13:59:53 by mg                #+#    #+#             */
-/*   Updated: 2025/11/08 14:03:45 by mg               ###   ########.fr       */
+/*   Updated: 2025/11/08 16:05:51 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 #include <string>
 
 // === CONSTRUCTOR === 
-ClapTrap::~ClapTrap() {	std::cout << "Destructor called" << std::endl;}
+ClapTrap::~ClapTrap() {	std::cout << "[Mom] Destructor called" << std::endl;}
 
 ClapTrap::ClapTrap() : _name("default"), _hitPoint(10), _energyPoint(10), _attackDamage(0)
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << " [Mom] Default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoint(10), _energyPoint(10), _attackDamage(0)
 {
-	std::cout << "String constructor called" << std::endl;
+	std::cout << "[Mom] String constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap& val)
@@ -33,7 +33,7 @@ ClapTrap::ClapTrap(const ClapTrap& val)
 	_hitPoint = val._hitPoint;
 	_energyPoint = val._energyPoint;
 	_attackDamage = val._attackDamage;
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "[Mom] Copy constructor called" << std::endl;
 }
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& other)

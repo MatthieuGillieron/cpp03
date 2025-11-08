@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 13:59:53 by mg                #+#    #+#             */
-/*   Updated: 2025/11/07 17:30:41 by mg               ###   ########.fr       */
+/*   Updated: 2025/11/08 14:03:45 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void ClapTrap::attack(const std::string& target)
 {
 	if (_energyPoint > 0 && _hitPoint > 0)
 	{
-		std::cout << "ClapTrap " << _name << "attacks " << target
+		std::cout << "ClapTrap " << _name << " attacks " << target
 		<< " , causing " << _attackDamage << " points of damage!" << std::endl;
 
 		_energyPoint -= 1;
@@ -76,7 +76,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 		std::cout << "he's died, u can't take more damage" << std::endl;
 	_hitPoint -= amount;
 
-	std::cout << "CLapTrap " << _name << " take " << amount<< " damage, HP: " << _hitPoint <<  std::endl;
+	std::cout << "CLapTrap " << _name << " take " << amount<< " damage"<<  std::endl;
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
@@ -87,7 +87,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 	else
 	{
 		_hitPoint += amount;
-		std::cout << "u add " << amount << " health point" << std::endl;	
+		std::cout << "You add " << amount << " health point" << std::endl;	
 	}
 
 }

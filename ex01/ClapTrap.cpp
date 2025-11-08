@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 13:59:53 by mg                #+#    #+#             */
-/*   Updated: 2025/11/08 17:19:12 by mg               ###   ########.fr       */
+/*   Updated: 2025/11/08 17:21:05 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 	else
 	{
 		_hitPoint += amount;
-		std::cout << "You add " << amount << " health point" << std::endl;	
+		std::cout << "You add " << amount << " health point" << "  |  HP: " << _hitPoint << std::endl;	
 	}
 
 }

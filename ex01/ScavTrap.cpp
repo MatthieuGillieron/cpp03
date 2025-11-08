@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 14:41:24 by mg                #+#    #+#             */
-/*   Updated: 2025/11/08 16:18:34 by mg               ###   ########.fr       */
+/*   Updated: 2025/11/08 16:30:47 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ ScavTrap::~ScavTrap() {std::cout << "Destructor called" << std:: endl;}
 
 ScavTrap::ScavTrap() : ClapTrap()
 {
+	_name = "default";
 	_hitPoint = 100;
 	_energyPoint = 50;
 	_attackDamage = 20;
@@ -34,11 +35,17 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	std::cout << "ScavTrap name constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& val)
+ScavTrap::ScavTrap(const ScavTrap& val) : ClapTrap(val)
 {
-	_name = val._name;
-	_hitPoint = val._hitPoint;
-	_energyPoint = val._energyPoint;
-	_attackDamage = val._attackDamage;
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "ScavTrap copy constructor called" << std::endl;
+}
+
+ScavTrap& ScavTrap::operator=(const ScavTrap& other)
+{
+	if (this != &other)
+	{
+		ClapTrap::operator=(other);
+		std::cout << "ScavTrap assignation operator called" << std::endl;
+	}
+	return *this;
 }

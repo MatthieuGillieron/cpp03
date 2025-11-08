@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 13:59:53 by mg                #+#    #+#             */
-/*   Updated: 2025/11/08 16:05:51 by mg               ###   ########.fr       */
+/*   Updated: 2025/11/08 17:19:12 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,9 @@ void ClapTrap::attack(const std::string& target)
 void ClapTrap::takeDamage(unsigned int amount)
 {
 	if (_hitPoint <= 0)
+	{
 		std::cout << "he's died, u can't take more damage" << std::endl;
+	}
 	_hitPoint -= amount;
 
 	std::cout << "CLapTrap " << _name << " take " << amount<< " damage"<<  std::endl;
@@ -81,7 +83,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
-	if (_hitPoint > 10)
+	if (_hitPoint > 100)
 		std::cout << "U can't add health point u are full life" << std::endl;
 	
 	else

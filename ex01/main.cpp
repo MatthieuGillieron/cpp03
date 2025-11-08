@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 13:58:22 by mg                #+#    #+#             */
-/*   Updated: 2025/11/08 16:32:44 by mg               ###   ########.fr       */
+/*   Updated: 2025/11/08 17:08:06 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,23 +21,26 @@ int main()
 {
 	
 	ScavTrap a("Eric");
-	ScavTrap c(a);
-	ClapTrap b("Bob");
-	ScavTrap x;
-
+	
 	std::cout << std::endl;
-	std::cout << "name de x :   " << x.getName() << std::endl;
-
 	
 	std::cout << "[ScavTrap INFO]" << std::endl;
-	std::cout << "Energy point: " << c.getEnergyPoint() << 
-	"  |  HP: " << c.getHitPoint() << std::endl;
+	std::cout << "Energy point: " << a.getEnergyPoint() << 
+	"  |  HP: " << a.getHitPoint() << std::endl;
 
 	std::cout << std::endl;
 
-	std::cout << "[ClapTrap INFO]" << std::endl;
-	std::cout << "Energy point: " << b.getEnergyPoint() << 
-	"  |  HP: " << b.getHitPoint() << std::endl;
+	a.attack("Yoda");
+	a.takeDamage(30);
+
+	std::cout << std::endl;
+	
+	std::cout << "[ScavTrap INFO]" << std::endl;
+	std::cout << "Energy point: " << a.getEnergyPoint() << 
+	"  |  HP: " << a.getHitPoint() << std::endl;
+
+	a.beRepaired(20);
+	a.guardGate();
 	
 	std::cout << std::endl;
 

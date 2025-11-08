@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 14:41:24 by mg                #+#    #+#             */
-/*   Updated: 2025/11/08 16:30:47 by mg               ###   ########.fr       */
+/*   Updated: 2025/11/08 17:09:27 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,9 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& other)
 		std::cout << "ScavTrap assignation operator called" << std::endl;
 	}
 	return *this;
+}
+
+void ScavTrap::guardGate()
+{
+	std::cout << "ScavTrap" << _name << " is now in Gate keeper mode." << std::endl;
 }

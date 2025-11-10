@@ -6,7 +6,7 @@
 /*   By: mg <mg@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 14:41:24 by mg                #+#    #+#             */
-/*   Updated: 2025/11/10 11:00:07 by mg               ###   ########.fr       */
+/*   Updated: 2025/11/10 12:38:39 by mg               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,3 @@ void ScavTrap::guardGate()
 {
 	std::cout << "ScavTrap" << _name << " is now in Gate keeper mode." << std::endl;
 }
-
